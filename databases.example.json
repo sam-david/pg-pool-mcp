@@ -1,0 +1,21 @@
+{
+  "databases": {
+    "local": {
+      "host": "localhost",
+      "port": 5432,
+      "database": "mydb",
+      "user": "postgres",
+      "password": "$PG_PASSWORD",
+      "readOnly": false
+    },
+    "production": {
+      "connectionString": "postgresql://$PROD_USER:$PROD_PASSWORD@prod-host:5432/prod_db",
+      "readOnly": true
+    }
+  },
+  "defaults": {
+    "readOnly": true,
+    "queryTimeout": 30000,
+    "poolSize": 5
+  }
+}
